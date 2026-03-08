@@ -1,9 +1,17 @@
 #include <iostream>
 using namespace std;
-main()
+int main()
 {
-cout<<" enter your weight in pounds:" ;
-float pounds;
-cin>>pounds;
-cout<<pounds<< " pounds is equal to" << pounds * 0.45 <<"kilograms";
-} 
+ char going;
+cout<<" are your friends going to university (press y for yes)";
+cin>>going;
+if(going == 'y'){
+    cout<<" you are also going";
+}
+return 0 ;
+}
+
+
+
+
+

@@ -2,24 +2,18 @@
 using namespace std;
 main()
 {
-    int holidays;
-    cout << " holidays : ";
-    cin >> holidays;
-    int workingdays;
-    workingdays = 365 - holidays;
-    int timeforgames = (workingdays * 63) + (holidays * 127);
-    int difference = 30000 - timeforgames;
-    int timeinhours = difference / 60;
-    int timeinminutes = difference % 60;
-    int norm = 30000;
-    if (timeforgames < norm)
+    float bill ;
+    cout << " enter the bill : ";
+    cin>>bill;
+    float discount1, discount2 ;
+    discount1 = bill - ( bill * 5 / 100 );
+    discount2 = bill - ( bill * 10 / 100 );
+    if (bill > 5000)
     {
-        cout << " tom sleeps well " << endl;
-        cout << timeinhours << " hours and " << timeinminutes << " minutes less for plays";
+        cout << " your dicounted bill is : " << discount2;
     }
     else
     {
-        cout << " tom will run away" << endl;
-        cout << timeinhours << " hours and" << timeinminutes << " minutes forn  play";
-    }
+        cout << " your discounted bill is : " << discount1;
+     }
 }

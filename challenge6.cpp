@@ -2,25 +2,17 @@
 using namespace std;
 main()
 {
-    float speed;
-    cout << " enter the speed : ";
-    cin >> speed;
-    if (speed < 10)
+    int salary_month = 10000;
+    int price_lap = 50000;
+    int advance, months;
+    advance = salary_month * (5 / 100.0) * 6;
+    if (advance >= salary_month * 0.5)
     {
-        cout << "slow";
+        cout << "you can buy laptop";
     }
-    if (speed > 10 && speed <= 50)
+    if (advance < salary_month * 0.5)
     {
-        cout << " average";
+        months = price_lap / (salary_month * 0.5);
+        cout << "Months required to buy laptop:" << months;
     }
-    if(speed>50 && speed<=150)
-    { 
-        cout<<" fast";
-    }
-    if(speed>150 && speed<= 1000){ 
-        cout<<" ultra fast";
-    }
-if(speed>1000){
-    cout<<" extremely fast";
-}
 }

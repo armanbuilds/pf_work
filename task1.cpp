@@ -1,14 +1,13 @@
 #include <iostream>
 using namespace std;
-main()
+int main()
 {
-string name,rollnumber,aggregate,section;
-cout<< "enter your name :"<<name ;
-cin>>name;
-cout<< "enter your roll number:" <<rollnumber;
-cin>>rollnumber;
-cout<<"enter your aggregate:"<<aggregate;
-cin>>aggregate;
-cout<<"enter your section:"<<section;
-cin>>section;
+    int cost;
+    cout << " enter the cost of the dress ";
+    cin >> cost;
+    if (cost > 1500)
+    {
+        cout << " buy the dress";
+    }
+    return 0;
 }

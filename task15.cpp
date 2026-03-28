@@ -7,18 +7,18 @@ int main()
     cout << "Enter The Number:";
     cin >> num;
 
-    int arr[50];
+    string arr[50];
 
     for (int i = 0; i < num; i++)
         cin >> arr[i];
 
-    int max = arr[0];
-
-    for (int i = 1; i < num; i++)
+    for (int i = 0; i < num; i++)
     {
-        if (arr[i] > max)
-            max = arr[i];
-    }
+        int len = arr[i].length();
 
-    cout << "Largest: " << max;
+        if (arr[i][len - 1] != '7')
+            arr[i] += '7';
+
+        cout << arr[i] << " ";
+    }
 }

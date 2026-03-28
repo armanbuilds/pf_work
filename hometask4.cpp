@@ -1,12 +1,27 @@
-#include<iostream>
+#include <iostream>
+
+
 using namespace std;
+
 int main() {
+   
+    string students[5];
 
-    int sum = 0;
-    for(int i = 1; i<=5; i = i + 1) {
-        sum = i + sum;
+    
+    cout << "Enter the names of 5 students:" << endl;
+    for (int i = 0; i < 5; i++) {
+        cout << "Student " << (i + 1) << ": ";
+        
+       
+        if (i == 0) cin.ignore(); 
+        getline(cin, students[i]);
+    }
 
+    
+    cout << "\n--- List of Students ---" << endl;
+    for (int i = 0; i < 5; i++) {
+        cout << (i + 1) << ". " << students[i] << endl;
+    }
 
-}
-    cout<<"The sum of the first 5 natural numbers is: "<<sum<<endl;
+    return 0;
 }

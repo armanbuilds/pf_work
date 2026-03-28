@@ -1,13 +1,15 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
-main()
-{cout<<" length of a rectangle : ";
-int length;
-cin>>length;
-cout<<"width of a rectangle : ";
-int width;
-cin>>width;
-int area;
-area=length *width;
-cout<<"area of a rectsangle is" <<area;
+main(){
+    int index[5];
+    for (int i = 0; i < 5; i++)
+    {
+        cout<<"the Number " <<(i+1)<< " is:"<<endl;
+        cin>>index[i];
+    }
+    cout<<"The 2nd & 4th number is :"<<index[1]<<" and "<<index[3]<<"\n";
+
+
+
 }
+    

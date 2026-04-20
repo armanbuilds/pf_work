@@ -1,33 +1,25 @@
 #include <iostream>
-
 using namespace std;
 
-int main() {
-    int n;
-    int sum = 0;
 
+
+int factorial(int x);
+
+main(){
+    int a,b;
+    cout<<"Enter the no. : ";
+    cin>> a;
+  
+    b=factorial(a);
+    cout<<"The Factorial is : " <<b;
     
-    cout << "Enter the number of elements: ";
-    cin >> n;
+   
+}
 
-    
-    int numbers[n];
-
-    
-    cout << "Enter " << n << " numbers:" << endl;
-    for (int i = 0; i < n; i++) {
-        cout << "Element " << (i + 1) << ": ";
-        cin >> numbers[i];
-    }
-
-    
-    for (int i = 0; i < n; i++) {
-        sum = sum + numbers[i]; 
-    }
-
-    cout << "\n----------------------------" << endl;
-    cout << "The total sum is: " << sum << endl;
-    cout << "----------------------------" << endl;
-
-    return 0;
+int factorial(int x){
+       int fac=0;
+      for( x;x>=1;x--){
+        fac+=x;
+      }
+      return fac;
 }

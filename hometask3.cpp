@@ -1,55 +1,35 @@
 #include <iostream>
-
+#include<iomanip>
 using namespace std;
 
+void projectTimecalculation(float hours,float days,float workers);
 
-void findMinMax(int arr[], int n) {
-  
-    int smallest = arr[0];
-    int largest = arr[0];
 
+main(){
+    cout<<"Enter the no. of needed hours [0-200000] : ";
+    float hours;
+    cin>>hours;
     
-    for (int i = 1; i < n; i++) {
-        
-        if (arr[i] < smallest) {
-            smallest = arr[i];
-        }
-        
-        if (arr[i] > largest) {
-            largest = arr[i];
-        }
-    }
+    cout<<"Enter the days that firm has to complete the project : ";
+    float days;
+    cin>> days;
 
-    
-    cout << "\n----------------------------" << endl;
-    cout << "Smallest Number: " << smallest << endl;
-    cout << "Largest Number: " << largest << endl;
-    cout << "----------------------------" << endl;
+    cout<<"Enter the no of workers : ";
+    float workers;
+    cin>> workers;
+
+    projectTimecalculation(hours,days,workers);
+
 }
 
-int main() {
-    int n;
+void projectTimecalculation(float hours,float days,float workers){
+    float actual_days=days-(days*(10/100.0));
+    float time_project_will_take = (actual_days*10)*workers;
 
-    cout << "Enter the number of elements: ";
-    cin >> n;
-
-    
-    if (n <= 0) {
-        cout << "Invalid array size." << endl;
-        return 1;
+    if(time_project_will_take >= hours ){
+        cout<<"Yes! "<<fixed<<setprecision(0)<<time_project_will_take-hours<<" hours left . ";
     }
-
-    int numbers[n];
-
-    
-    cout << "Enter " << n << " numbers:" << endl;
-    for (int i = 0; i < n; i++) {
-        cout << "Element " << (i + 1) << ": ";
-        cin >> numbers[i];
+    else{
+        cout<<"Not enough time! "<<fixed<<setprecision(0)<<hours-time_project_will_take<<" hours needed . ";
     }
-
-    
-    findMinMax(numbers, n);
-
-    return 0;
 }
